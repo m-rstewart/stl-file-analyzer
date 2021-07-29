@@ -41,8 +41,8 @@ Internally, a `Triangle` is represented as a 2d array: the outer triangle array 
 
 ## Possible Improvements
 
-In order to allow for very large files to be analyzed efficiently, I opted for using a stream to read the file to avoid loading the entie file into memory. Parsing would be very memory ineffiecient if a file that contained millions of triangles needed to be loaded into memory first before analyzation could begin.
+In order to allow for very large files to be analyzed efficiently, I opted for using a stream to read the file to avoid loading the entire file into memory. Parsing would be very memory ineffiecient if a file that contained millions of triangles needed to be loaded into memory first before analyzation could begin.
 
-The main area I could see improving upon would be the line parsing itself. Currently, it checks if each line includes the word "vertex." From there, it then conducts a series of iterative transformations and results in a time complexity that to me seems sub-optimal.
+The main area I could see improving upon would be the line parsing itself. Currently, it checks if each line includes the word "vertex." From there, it then conducts a series of iterative transformations and results in a time complexity that, to me, seems sub-optimal.
 
 In addition, there are probably ways to improve the handling of the asynchronous nature of the stream itself in `STLFileAnalyzer`.
